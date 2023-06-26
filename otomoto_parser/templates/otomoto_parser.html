@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Otomoto Parser</title>
+</head>
+<body>
+    <h1>Otomoto Parser</h1>
+    <form method="post">
+        {% csrf_token %}
+        {% if task_id %}
+            <input type="hidden" name="task_id" value="{{ task_id }}">
+        {% endif %}
+        <button type="submit">Получить цены и названия</button>
+    </form>
+    {% if prices_and_titles %}
+        <ul>
+            {% for data in prices_and_titles %}
+                <li>{{ data.price }} - {{ data.title }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
+
