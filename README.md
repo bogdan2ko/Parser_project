@@ -41,7 +41,7 @@ You can customize the script to parse prices for different motorcycle brands, mo
 
 5. Finally, start the Docker container with docker-compose up to run the updated script.
 
-##Limitations
+## Limitations
 Please note the following limitations of the parser:
 
 The script relies on the specific HTML structure of the Otomoto website. If the website structure changes, the parser may not work correctly.
